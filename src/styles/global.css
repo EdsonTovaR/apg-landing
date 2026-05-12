@@ -8,3 +8,8 @@
   --color-apg-true-black: #0D0D0D;
   --color-apg-silver: #A7A9AC;
 }
+
+/* NUEVO: Hacemos que la navegación mediante anclas (links con #) sea suave */
+html {
+  scroll-behavior: smooth;
+}

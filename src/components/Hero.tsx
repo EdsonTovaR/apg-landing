@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative w-full h-screen min-h-[600px] flex items-center">
+    <section id="home" className="relative w-full h-screen min-h-[600px] flex items-center">
       
       {/* IMAGEN DE FONDO (Placeholder de Unsplash) */}
       <div 
