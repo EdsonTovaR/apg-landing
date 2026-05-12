@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  /* Aquí inyectamos la paleta oficial de APG Manufacturing Solutions */
+  --color-apg-electric-blue: #0066FF;
+  --color-apg-gunmetal: #4B4F56;
+  --color-apg-dark-gray: #1F2125;
+  --color-apg-true-black: #0D0D0D;
+  --color-apg-silver: #A7A9AC;
+}

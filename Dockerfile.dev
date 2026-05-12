@@ -1,0 +1,21 @@
+# Usamos una versión específica y ligera de Node para garantizar consistencia
+FROM node:20-alpine
+
+# Establecemos el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copiamos solo los archivos de dependencias primero
+# Esto aprovecha el caché de Docker; si no hay dependencias nuevas, este paso es instantáneo
+COPY package.json package-lock.json ./
+
+# Instalamos las dependencias
+RUN npm install
+
+# Copiamos el resto del código
+COPY . .
+
+# Exponemos el puerto que usa Vite por defecto
+EXPOSE 5173
+
+# Comando para iniciar el servidor de desarrollo mapeando todas las IPs
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
