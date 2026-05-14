@@ -9,7 +9,6 @@ interface ServiceCardProps {
 }
 
 
-
 export const ServiceCard: React.FC<ServiceCardProps> = ({ title, items, icon }) => {
   // Estado local para saber si esta tarjeta específica está abierta o cerrada
   const [isOpen, setIsOpen] = useState(false);
